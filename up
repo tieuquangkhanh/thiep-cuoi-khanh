@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp Cưới Khánh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #fff8e1, #ffe0b2);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      color: #d81b60;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #6d4c41;
+      margin-bottom: 25px;
+    }
+
+    .details {
+      font-size: 1.2em;
+      margin: 25px 0;
+    }
+
+    .invitation {
+      font-style: italic;
+      background-color: #fff3e0;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+
+    .petal {
+      position: absolute;
+      top: -50px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/885/885462.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
+      animation: fall linear infinite;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thiệp Cưới</h1>
+    <h2>Tiêu Quang Khánh &nbsp;❤️&nbsp; [Tên Cô Dâu]</h2>
+
+    <div class="details">
+      <p>🗓 <strong>Ngày cưới:</strong> 26/10/20xx</p>
+      <p>⏰ <strong>Thời gian:</strong> 11h00</p>
+      <p>📍 <strong>Địa điểm:</strong> [Địa điểm sẽ được cập nhật sau]</p>
+    </div>
+
+    <div class="invitation">
+      <p>“Trân trọng kính mời bạn đến dự lễ cưới và uống chén rượu mừng cùng chúng tôi.”</p>
+    </div>
+
+    <footer>
+      Thiệp cưới được thực hiện bởi Khánh ❤
+    </footer>
+  </div>
+
+  <!-- Nhạc nền -->
+  <audio autoplay loop>
+    <source src="https://docs.google.com/uc?export=download&id=1zRa4BfdpxqTYmUEEqnW3ZUGAjKJPC0Z9" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ nhạc nền.
+  </audio>
+
+  <!-- Hiệu ứng cánh hoa rơi -->
+  <script>
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * window.innerWidth + 'px';
+      petal.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(petal);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 10000);
+    }
+    setInterval(createPetal, 300);
+  </script>
+</body>
+</html>
