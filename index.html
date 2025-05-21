@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiệp Cưới - Tiêu Quang Khánh</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1f1f1f, #2c3e50);
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            margin-top: 60px;
+            font-size: 2.8em;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+        .invitation {
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 1.2em;
+            padding: 0 20px;
+        }
+        .flower {
+            position: absolute;
+            top: -50px;
+            width: 30px;
+            height: 30px;
+            background: url('https://cdn-icons-png.flaticon.com/512/3159/3159066.png') no-repeat center;
+            background-size: contain;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Thiệp Mời Dự Lễ Cưới</h1>
+    <div class="info">
+        <p>Chú rể: <strong>Tiêu Quang Khánh</strong></p>
+        <p>Cô dâu: <strong>Đang cập nhật</strong></p>
+        <p>Thời gian: <strong>11h00 - 26/10/20xx</strong></p>
+        <p>Địa điểm: <strong>Đang cập nhật</strong></p>
+    </div>
+    <div class="invitation">
+        “Trân trọng kính mời bạn đến dự lễ cưới và uống chén rượu mừng cùng chúng tôi”
+    </div>
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+    <script>
+        // Hiệu ứng hoa rơi
+        const flowerCount = 20;
+        for (let i = 0; i < flowerCount; i++) {
+            let flower = document.createElement('div');
+            flower.className = 'flower';
+            flower.style.left = Math.random() * 100 + 'vw';
+            flower.style.animationDuration = 5 + Math.random() * 5 + 's';
+            flower.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(flower);
+        }
+    </script>
+</body>
+</html>
